@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'adityawaikar1007/nginx:v01'
+        DOCKER_IMAGE = 'adityawaikar1007/nginx:latest'
         DOCKER_CREDENTIALS_ID = '7' // Jenkins credentials ID for Docker Hub
     }
 
