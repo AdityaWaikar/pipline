@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     sh ''' docker login -u adityawaikar1007 -p Aditya@1007 '''
-                    Login to Docker Hub
+                    //Login to Docker Hub
                     withCredentials([usernamePassword(credentialsId: env.DOCKER_CREDENTIALS_ID, usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                     //     // bat '''
                     //     // docker login -u %DOCKER_USERNAME% -p %DOCKER_PASSWORD%
