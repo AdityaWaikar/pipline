@@ -15,7 +15,7 @@ pipeline {
                         // bat '''
                         // docker login -u %DOCKER_USERNAME% -p %DOCKER_PASSWORD%
                         // '''
-                        bat ''' pwd '''
+                        bat ''' whoami '''
                         bat ''' dir '''
                         bat ''' docker '''
                     }
