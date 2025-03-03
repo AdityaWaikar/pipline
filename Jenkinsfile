@@ -19,7 +19,7 @@ pipeline {
                     //     bat ''' whoami '''
                     //     bat ''' dir '''
                     //     bat ''' docker login -u adityawaikar1007 -p Aditya@1007 '''
-                    // }
+                    // 
 
                     Pull the Docker image
                     sh "docker pull %DOCKER_IMAGE%"
@@ -27,4 +27,5 @@ pipeline {
             }
         }
     }
+}
 }
