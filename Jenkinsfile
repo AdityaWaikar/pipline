@@ -13,7 +13,8 @@ pipeline {
                     // Login to Docker Hub
                     withCredentials([usernamePassword(credentialsId: env.DOCKER_CREDENTIALS_ID, usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                         bat '''
-                        echo %Aditya@1007% | docker login -u %DOCKER_USERNAME% --password-stdin                         '''
+                        docker login -u %DOCKER_USERNAME% -p %DOCKER_PASSWORD%
+                        '''
                     }
 
                     // Pull the Docker image
@@ -23,4 +24,3 @@ pipeline {
         }
     }
 }
-
