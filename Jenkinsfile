@@ -13,7 +13,7 @@ pipeline {
                     // Login to Docker Hub
                     withCredentials([usernamePassword(credentialsId: env.DOCKER_CREDENTIALS_ID, usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                         bat '''
-                        echo %Aditya@1007% | docker login -u %DOCKER_USERNAME% --password-stdin --timeout=600
+                        echo %Aditya@1007% | docker login -u %DOCKER_USERNAME% --password-stdin
                         '''
                     }
 
