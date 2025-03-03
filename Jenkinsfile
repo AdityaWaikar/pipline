@@ -21,11 +21,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        always {
-            // Logout from Docker Hub
-            //bat 'docker logout'
-        }
-    }
 }
