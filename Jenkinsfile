@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'your-dockerhub-username/your-image-name:your-tag'
-        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials' // Jenkins credentials ID for Docker Hub
+        DOCKER_CREDENTIALS_ID = '7' // Jenkins credentials ID for Docker Hub
     }
 
     stages {
@@ -13,7 +13,7 @@ pipeline {
                     // Login to Docker Hub
                     withCredentials([usernamePassword(credentialsId: env.DOCKER_CREDENTIALS_ID, usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                         bat '''
-                        echo %DOCKER_PASSWORD% | docker login -u %DOCKER_USERNAME% --password-stdin --timeout=600
+                        echo %Aditya@1007% | docker login -u %DOCKER_USERNAME% --password-stdin --timeout=600
                         '''
                     }
 
