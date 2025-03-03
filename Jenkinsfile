@@ -9,7 +9,7 @@ pipeline {
         stage('Pull Docker Image') {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials') {
+                    docker.withRegistry('https://registry.hub.docker.com', "${DOCKER_CERDENTIALS_ID}") {
                         docker.image("${IMAGE_NAME}").pull()
                     }
                 }
