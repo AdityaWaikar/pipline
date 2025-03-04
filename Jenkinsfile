@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'your-dockerhub-username/your-image-name:your-tag'
+        DOCKER_IMAGE = 'adityawaikar1007/nginx:v01'
     }
 
     stages {
